@@ -1,6 +1,6 @@
 # Curso de Linux, proyecto final
 
-En este repositorio se irá subiendo el proyecto final, echo en equipos de dos del curso de Linux de PROTECSA
+En este repositorio se irá subiendo el proyecto final, realizado en equipos de dos personas, este proyecto pertenece al curso de Linux de PROTECSA
 -Fecha límite de entrega, 26 de abril del 2025
 
 
