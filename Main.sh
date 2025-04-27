@@ -46,6 +46,7 @@ case "$opcion" in
 		salir=true
 		echo "Nos vemosssss"
 		echo "----Usted está saliendo de la terminal----"
+		exit 0
                 ;;
         *) #Si selecciona alguna opción fuera de las dadas marca un error
                 echo "Opción fuera del rango, intenta de nuevo"
@@ -80,6 +81,9 @@ case "$comando" in
                 ;;
 	mp3)
 		bash mp3.sh
+		;;
+	chill)
+		bash chill.sh
 		;;
 	juego)
 		bash  juego.sh

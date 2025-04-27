@@ -14,6 +14,7 @@ echo " creditos             ---Se muestra el nombre de las personas que crearon 
 echo " juego		      ---Juego programado, también conocido como tres en línea, tic-tac-toe"
 echo " mp3		      ---Se ingresa al reproductor mp3 programado por los buddies"
 echo " salir 		      ---Se sale de la terminal"
+echo " chill		      ---Crea tu chico chill o chilln't"
 echo ""
 echo "──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"
 
