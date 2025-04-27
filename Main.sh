@@ -56,7 +56,8 @@ done #se cierra el done
 
 # Inicia la terminal simulada
 while true; do
-	echo "$username: "
+	current_dir=$(pwd)
+	echo "$username@protecsabuddyterminal:$current_dir$ "
 read -r comando args
 case "$comando" in
 	ayuda)
