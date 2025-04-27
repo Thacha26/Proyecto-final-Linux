@@ -68,7 +68,7 @@ echo -e "${RESET}"
 sleep 0.7
 
 echo -e "${MAGENTA}"
-figlet "Frida Thails"
+figlet "Frida Thais"
 sleep 1
 
 # Arte ASCII extra

@@ -57,51 +57,67 @@ check_draw() {
 # Función principal
 play_game() {
     current_player="X"
-
-    while true; do
+    salir=false
+    
+    while [[ $salir == false ]]; do
         print_board
         echo "Turno del jugador $current_player"
-        read -p "Ingrese fila (0-2): " row
-        read -p "Ingrese columna (0-2): " col
+        echo "1. Hacer movimiento"
+        echo "2. Salir del juego"
+        read -p "Seleccione una opción (1-2): " opcion
 
-        # Validar entrada
-        if ! [[ "$row" =~ ^[0-2]$ && "$col" =~ ^[0-2]$ ]]; then
-            echo "⚠️  Movimiento inválido. Intente de nuevo."
-            sleep 1
-            continue
-        fi
+        case "$opcion" in
+            1)
+                read -p "Ingrese fila (0-2): " row
+                read -p "Ingrese columna (0-2): " col
 
-        idx=$((row * 3 + col))
+                # Validar entrada
+                if ! [[ "$row" =~ ^[0-2]$ && "$col" =~ ^[0-2]$ ]]; then
+                    echo "⚠️ Movimiento inválido. Intente de nuevo."
+                    sleep 1
+                    continue
+                fi
 
-        if [[ ${board[$idx]} != " " ]]; then
-            echo "⚠️  Espacio ocupado. Intente de nuevo."
-            sleep 1
-            continue
-        fi
+                idx=$((row * 3 + col))
 
-        board[$idx]=$current_player
+                if [[ ${board[$idx]} != " " ]]; then
+                    echo "⚠️ Espacio ocupado. Intente de nuevo."
+                    sleep 1
+                    continue
+                fi
 
-        if check_winner $current_player; then
-            print_board
-            echo "🏆 ¡Jugador $current_player gana!"
-            break
-        fi
+                board[$idx]=$current_player
 
-        if check_draw; then
-            print_board
-            echo "🤝 ¡Empate!"
-            break
-        fi
+                if check_winner $current_player; then
+                    print_board
+                    echo "🏆 ¡Jugador $current_player gana!"
+                    break
+                fi
 
-        # Cambiar de jugador
-        if [[ "$current_player" == "X" ]]; then
-            current_player="O"
-        else
-            current_player="X"
-        fi
+                if check_draw; then
+                    print_board
+                    echo "🤝 ¡Empate!"
+                    break
+                fi
+
+                # Cambiar de jugador
+                if [[ "$current_player" == "X" ]]; then
+                    current_player="O"
+                else
+                    current_player="X"
+                fi
+                ;;
+            2)
+                salir=true
+                echo "Estás saliendo de este maravilloso juego....byee"
+                ;;
+            *)
+                echo "Opción fuera del rango, intente otra vez"
+                sleep 1
+                ;;
+        esac
     done
 }
 
-# Ejecutar el juego
+# Iniciar el juego
 play_game
-

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-
 echo -e "\t██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗"
 echo -e "\t██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝"
 echo -e "\t██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  "
 echo -e "\t██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  "
 echo -e "\t╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗"
 echo -e "\t ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝"
-echo -e "\t    								 "
+echo -e "\t    		"
+
 
 #Se bloquean lso comandos de Ctrl z y c
 trap '' SIGINT  # Bloquea Ctrl+C
@@ -29,7 +29,7 @@ while [[ $salir == false ]]; do
 #Ahora se debe de verificar que el usuario y contraseña existan
 if su -c "exit" "$username" <<< "$password" 2>/dev/null; then
         echo "Muy bien, puede acceder ahora"
-        exit 0
+        break
 else
 echo -e "\t ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	echo -e "\tLo lamento, el usuario o contraseña son incorrectos"
@@ -54,3 +54,43 @@ case "$opcion" in
 	fi #se cierra el if
 done #se cierra el done
 
+# Inicia la terminal simulada
+while true; do
+	echo "$username: "
+read -r comando args
+case "$comando" in
+	ayuda)
+		bash ayuda.sh
+                ;;
+        infosis)
+		bash infosis.sh
+		;;
+        salir)
+		echo "Cerrando sesión..."
+		break
+		;;
+	fecha)
+		bash fechayhora.sh
+		;;
+	creditos)
+		bash creditos.sh
+		;;
+	buscar)
+		bash buscar.sh $args
+            ;;
+	mp3)
+		bash mp3.sh
+		;;
+	juego)
+		bash  juego.sh
+		;;
+	*)
+		if command -v "$comando" >/dev/null 2>&1;then
+			$comando $args
+		else
+			echo "Comando fuera del rango, escribe ayuda si quieres conocer las opciones disponibles"
+		fi
+		;;
+	esac
+
+done
