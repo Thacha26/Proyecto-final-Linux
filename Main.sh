@@ -76,11 +76,7 @@ case "$comando" in
 		bash creditos.sh
 		;;
 	buscar)
- 	if [ -z "$args" ]; then
-                echo -n "Uso: buscar <carpeta> <archivo>"
-        else
                 bash buscar.sh $args
-                fi
                 ;;
 	mp3)
 		bash mp3.sh
