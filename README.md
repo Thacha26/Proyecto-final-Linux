@@ -5,13 +5,19 @@ En este repositorio se irá subiendo el proyecto final, realizado en equipos de 
 
 # Como probar la terminal
 clonar el repositorio de git, ya sea con SSH o HTTPS
-https://github.com/Thacha26/Proyecto-final-Linux.git
-git@github.com:Thacha26/Proyecto-final-Linux.git
+
+HTTPS: https://github.com/Thacha26/Proyecto-final-Linux.git
+SSH: git@github.com:Thacha26/Proyecto-final-Linux.git
 
 Y después compilar el archivo Main
-```./Main
+```bash
+./Main
 ```
 Y después seguir las instrcciones que aparezcan
+
+También se pueden probar los archivos de forma indivual
+Se debe de escribir ./nombre_del_archivo
+Seguir las instrcciones que aparezcan
 ## Sobre el proyecto
 
 Este proyecto consta de programar una terminal.
