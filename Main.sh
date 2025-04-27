@@ -37,7 +37,7 @@ echo -e "\t ━━━━━━━━━━━━━━━━━━━━━━�
         echo -e "\t1. Volver a intentar"
         echo -e "\t2. Salir"
 echo -e "\t ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-read -r opcion
+read -r  opcion
 case "$opcion" in
 	1)
 		continue #Si selecciona 1 continúa
@@ -57,8 +57,7 @@ done #se cierra el done
 # Inicia la terminal simulada
 while true; do
 	current_dir=$(pwd)
-	echo "$username@protecsabuddyterminal:$current_dir$ "
-read -r comando args
+	read -r -p "$username@protecsabuddyterminal:$current_dir$ " comando args
 case "$comando" in
 	ayuda)
 		bash ayuda.sh
@@ -77,8 +76,12 @@ case "$comando" in
 		bash creditos.sh
 		;;
 	buscar)
-		bash buscar.sh $args
-            ;;
+ 	if [ -z "$args" ]; then
+                echo -n "Uso: buscar <carpeta> <archivo>"
+        else
+                bash buscar.sh $args
+                fi
+                ;;
 	mp3)
 		bash mp3.sh
 		;;
