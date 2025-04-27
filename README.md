@@ -7,6 +7,7 @@ En este repositorio se irá subiendo el proyecto final, realizado en equipos de 
 clonar el repositorio de git, ya sea con SSH o HTTPS
 
 HTTPS: https://github.com/Thacha26/Proyecto-final-Linux.git
+
 SSH: git@github.com:Thacha26/Proyecto-final-Linux.git
 
 Y después compilar el archivo Main
