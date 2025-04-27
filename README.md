@@ -17,7 +17,10 @@ Y después compilar el archivo Main
 Y después seguir las instrcciones que aparezcan
 
 También se pueden probar los archivos de forma indivual
-Se debe de escribir ./nombre_del_archivo
+Se debe de escribir 
+```bash
+./nombre_del_archivo
+```
 Seguir las instrcciones que aparezcan
 ## Sobre el proyecto
 
