@@ -23,38 +23,38 @@ A continuación, se muestran unas capturas de como se ve la terminal al iniciarl
 
 - Inicio de la terminal
 
-![Captura_Inicio_terminal](Captura_Inicio_terminal.png)
+![Captura_Inicio_terminal](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/Captura_Inicio_terminal.png)
 
 - Mp3
 
-![MP2](MP3.png)
+![MP2](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/MP3.png)
 
 - Comando extra
 
-![Comando_extra](Extra.png)
+![Comando_extra](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/Extra.png)
 
 - Juego del gato
 
-![Juego](Gatpo.png)
+![Juego](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/Gatpo.png)
 
 - Créditos
 
-![Créditos](créditospt1.png)
+![Créditos](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/cr%C3%A9ditospt1.png)
 
-![Créditos](créditospt2.png)
+![Créditos](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/cr%C3%A9ditospt2.png)
 
 
 - Fecha y hora
 
-![fecha](fecha.png)
+![fecha](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/fecha.png)
 
 - Infosis
 
-![info](infosis.png)
+![info](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/infosis.png)
 
 - Buscar
 
-![busca](Buscar.png)
+![busca](https://github.com/Thacha26/Proyecto-final-Linux/blob/main/Capturas/Buscar.png)
 
 # Como probar la terminal
 clonar el repositorio de git, ya sea con SSH o HTTPS
