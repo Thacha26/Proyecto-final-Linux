@@ -5,6 +5,7 @@ Esta es una guía para las personas que desean hacer alguna contribución.
 ## Requisitos a instalar
 
 - Necesitarás tener una cuenta de git
+- A demás se debe de tener conocimientos previos en shell scripting
 
 ## Como clonar y configurar el proyecto
 
